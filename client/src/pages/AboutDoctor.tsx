@@ -32,12 +32,14 @@ const AboutDoctor: FC = () => {
                             {/* Image Section - Sticky on Desktop */}
                             <div className="w-full lg:w-5/12 lg:sticky lg:top-32 flex-shrink-0">
                                 <div className="aspect-[4/5] relative rounded-2xl overflow-hidden group shadow-2xl">
-                                    {/* Using a placeholder professional image. You can later replace this source path with imported asset */}
-                                    <img 
-                                        src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop" 
+                                    <img
+                                        src="/static/optimized/doc-image-home.avif"
                                         alt={content.title}
                                         loading="eager"
                                         fetchPriority="high"
+                                        decoding="async"
+                                        width="900"
+                                        height="1125"
                                         className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-[#0a0a0a]/20 to-transparent"></div>
