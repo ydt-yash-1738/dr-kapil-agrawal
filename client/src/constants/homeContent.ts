@@ -1,4 +1,4 @@
-const docImage = "/static/optimized/doc-image-home.avif";
+const docImage = "/static/optimized/doc-image-home.jpg";
 
 export const procedures = [
     { title: "Rhinoplasty", desc: "Refining facial harmony", img: "/static/optimized/procedure-rhinoplasty.jpg" },

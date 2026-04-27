@@ -25,7 +25,7 @@ const AboutSection: FC = () => {
                         </Link>
                     </MagneticButton>
                 </div>
-                <div className="relative h-[600px] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-[4/5] w-full md:w-[90%] lg:w-[85%] mx-auto overflow-hidden rounded-2xl shadow-2xl">
                     <img
                         src={aboutData.image}
                         alt={aboutData.imageAlt}
