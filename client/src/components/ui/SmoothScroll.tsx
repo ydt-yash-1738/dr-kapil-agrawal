@@ -42,6 +42,25 @@ const SmoothScroll: FC<SmoothScrollProps> = ({ children }) => {
         }
     }, [location.pathname, location.hash]);
 
+    useEffect(() => {
+        const handleModalScrollLock = (event: Event) => {
+            const shouldLock = (event as CustomEvent<boolean>).detail;
+
+            if (shouldLock) {
+                lenisRef.current?.stop();
+            } else {
+                lenisRef.current?.start();
+            }
+        };
+
+        window.addEventListener('modal-scroll-lock', handleModalScrollLock);
+
+        return () => {
+            window.removeEventListener('modal-scroll-lock', handleModalScrollLock);
+            lenisRef.current?.start();
+        };
+    }, []);
+
     return <div className="w-full min-h-screen">{children}</div>;
 };
 
