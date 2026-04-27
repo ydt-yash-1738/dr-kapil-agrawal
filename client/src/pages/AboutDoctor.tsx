@@ -11,8 +11,8 @@ const AboutDoctor: FC = () => {
 
     return (
         <div className="bg-[#0a0a0a] min-h-screen pb-10 md:pb-20">
-            <Section className="container mx-auto px-4 md:px-6 z-10 relative">
-                <div className="mb-6 md:mb-12">
+            <Section className="container mx-auto px-4 md:px-6 z-10 relative justify-start pt-28 md:pt-36">
+                <div className="mb-10 md:mb-12">
                     <MagneticButton>
                         <Link to="/" className="inline-flex items-center text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors">
                             <span className="mr-2">←</span> Back to Home
