@@ -33,7 +33,7 @@ const AboutDoctor: FC = () => {
                             <div className="w-full lg:w-5/12 lg:sticky lg:top-32 flex-shrink-0">
                                 <div className="aspect-[4/5] relative rounded-2xl overflow-hidden group shadow-2xl">
                                     <img
-                                        src="/static/optimized/doc-image-home.avif"
+                                        src="/static/optimized/doc-image-home.jpg"
                                         alt={content.title}
                                         loading="eager"
                                         fetchPriority="high"

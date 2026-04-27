@@ -2,7 +2,7 @@ import { type FC } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import TextReveal from './ui/TextReveal';
 
-const heroImage = '/static/optimized/luxury-medical-spa-hero.jpg';
+const heroImage = '/static/docImageHome.jpg';
 
 const Hero: FC = () => {
     const { scrollY } = useScroll();
@@ -20,7 +20,7 @@ const Hero: FC = () => {
                 <img
                     src={heroImage}
                     alt="Luxury plastic surgery medical spa suite"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover brightness-[0.65] saturate-[0.7] contrast-[1.15]"
                     width="1600"
                     height="914"
                     fetchPriority="high"
