@@ -10,7 +10,7 @@ const ProceduresSection: FC = () => {
     return (
         <>
             <Section id="procedures" className="container mx-auto px-4 md:px-6 z-10 relative bg-[#0a0a0a]">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24">
                     <div className="max-w-2xl">
                         <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-6 flex items-center">
                             <span className="w-12 h-px bg-gray-700 mr-4"></span>
