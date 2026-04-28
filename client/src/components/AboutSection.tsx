@@ -1,11 +1,13 @@
-import { type FC } from 'react';
-import { Link } from 'react-router-dom';
+import { type FC, useState } from 'react';
 import { aboutData } from '../constants/homeContent';
 import MagneticButton from './ui/MagneticButton';
 import Section from './ui/Section';
 import TextReveal from './ui/TextReveal';
+import AboutDoctorModal from './AboutDoctorModal';
 
 const AboutSection: FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <Section id="about" className="container mx-auto px-4 md:px-6 z-10 relative bg-[#0a0a0a]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -20,9 +22,9 @@ const AboutSection: FC = () => {
                         {aboutData.description}
                     </p>
                     <MagneticButton>
-                        <Link to={aboutData.buttonLink} className="px-8 py-4 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                        <button type="button" onClick={() => setIsModalOpen(true)} className="px-8 py-4 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
                             {aboutData.buttonText}
-                        </Link>
+                        </button>
                     </MagneticButton>
                 </div>
                 <div className="relative aspect-[4/5] w-full md:w-[90%] lg:w-[85%] mx-auto overflow-hidden rounded-2xl shadow-2xl">
@@ -37,6 +39,7 @@ const AboutSection: FC = () => {
                     />
                 </div>
             </div>
+            <AboutDoctorModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </Section>
     );
 };
